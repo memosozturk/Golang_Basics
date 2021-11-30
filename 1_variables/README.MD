@@ -45,14 +45,16 @@ package main
 
 import "fmt"
 
-var degisken_1 string
-var degisken_2 = "deger 2"
-
 func main() {
-	degisken_1 = "deger 1"
-	degisken_3 := "deger 3"
-
-	fmt.Println(degisken_1,degisken_2,degisken_3)
+	//regular declaration
+	var var_1 string
+	var_1 = "variable declaration"
+	//Short declaration
+	var_2 := 11
+	fmt.Println(var_1, var_2)
+	//multiple declaration
+	mehmet, ahmet, ali, emre, efe := 1, 2, 3, 4, 5
+	fmt.Println(mehmet, ahmet, ali, emre, efe)
 }
 ```
 
@@ -69,24 +71,25 @@ package main
 
 import "fmt"
 
+//Global variable
+//multiple declaration
 var (
-	dilAdi     = "go"
-	konum      = "turkiye"
-	kisiSayisi int
+	firstName = "mehmet"
+	lastName  = "ozturk"
+	age       = 25
 )
 
 func main() {
+	//short multiple declaration
 	a, b, c, d := 1, 2, "go", true
 	fmt.Println(a, b, c, d)
-	a, b, c, d = 2, 1, "go turkiye", false
-	fmt.Println(a, b, c, d)
-
+	//multiple declaration(not short declaration)
 	var i, j int = 1, 2
 	fmt.Println(i, j)
+	//multiple assignment
 	i, j = 2, 1
 	fmt.Println(i, j)
 
-	fmt.Println(dilAdi, konum, kisiSayisi)
 }
 ```
 
@@ -101,23 +104,24 @@ package main
 
 import "fmt"
 
-const sabit_1 = "deger 1"
+//constant declaration
+const const_1 = "deger 1"
 
+//multiple constant declaration
 const (
-	sabit_2 = "deger 2"
-	sabit_3 = "deger 3"
-	sabit_4 = "deger 4"
+	const_2 = "deger2"
+	const_3 = "deger3"
+	const_4 = "deger4"
 )
 
+//iota "asc" declaration
 const (
-	sabit_5 = iota
-	sabit_6
-	sabit_7
+	const_5 = iota
+	const_6
+	const_7
 )
 
 func main() {
-	//sabit_1 = "deger 1.1"
-
-	fmt.Println(sabit_1, sabit_2, sabit_3, sabit_4, sabit_5, sabit_6, sabit_7)
+	fmt.Println(const_1, const_2, const_3, const_4, const_5, const_6, const_7)
 }
 ```

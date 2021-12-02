@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"fmt"
 	"time"
 )
 
@@ -34,5 +35,16 @@ func (u User) LikeCount() int {
 }
 
 func main() {
-	u1 := User{}
+	u1 := User{
+		Name:    "mehmet",
+		Surname: "ozturk",
+	}
+	for i := 0; i < 11; i++ {
+		if err := u1.Like(); err != nil {
+			fmt.Println(err)
+			break
+
+		}
+		fmt.Println(u1.LikeCount())
+	}
 }
